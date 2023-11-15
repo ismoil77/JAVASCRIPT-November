@@ -102,9 +102,19 @@
 
 
 
-// task8 i dont know
+// task8
 
 
+    // function fibonachi(a) {
+    //     if (a == 1) {
+    //         return 0
+    //     }
+    //     else if (a == 2) {
+    //         return 1
+    //     }
+    //     return fibonachi(a - 1) + fibonachi(a - 2)
+    // }
+    // console.log(fibonachi(2));
 
 
 // let a = 1;
