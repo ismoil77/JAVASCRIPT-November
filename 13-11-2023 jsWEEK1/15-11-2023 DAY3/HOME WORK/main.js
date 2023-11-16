@@ -5,13 +5,13 @@
 //         if (a % i == 0) {
 //             cnt++
 //         }
-        
-        
+
+
 //     }
 //     console.log(cnt);
 //      return cnt==2?true:false
 // }
-// console.log(isPrime(111));
+// console.log(isPrime(121));
 
 
 
@@ -45,7 +45,7 @@
 //         sum += a % 10;
 //         cnt++
 //         a = Math.floor(a / 10)
-        
+
 //     }
 //     return sum/cnt
 
@@ -68,8 +68,8 @@
 //         }
 
 //         a = Math.floor(a/10)
-        
-        
+
+
 //     }
 //     return `min:${min} max:${max}`
 // }
@@ -115,6 +115,20 @@
     //     return fibonachi(a - 1) + fibonachi(a - 2)
     // }
     // console.log(fibonachi(2));
+
+
+// function fibonachii(a) {
+//     for (let i = a;i)
+// }
+// console.log(fibonachi(10));
+
+
+// function fibonachiie() {
+//   
+// }
+// console.log(fibonachiie());
+
+
 
 
 // let a = 1;
