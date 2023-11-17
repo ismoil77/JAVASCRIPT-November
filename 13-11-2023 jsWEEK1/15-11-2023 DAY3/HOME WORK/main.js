@@ -123,8 +123,18 @@
 // console.log(fibonachi(10));
 
 
+
+//   true---> task8
 // function fibonachiie() {
-//   
+//    let num1 = 0;
+//     let num2 = 1;  
+//     for (let i = num2; i < 10; i++){
+//         let num3 = num1+num2
+//         num1 = num2;
+//         num2 = num3;
+//         console.log(num2);
+//     }
+//     return " "
 // }
 // console.log(fibonachiie());
 

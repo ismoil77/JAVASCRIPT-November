@@ -24,11 +24,11 @@
     2) В var , но тут работает очень странно , если вызвать его до создания оно выйдет но значение не придёт придёт как "UNDEFINED"
 
     
-   - </h2>
+  </h2>
     <h1>Не рабочие моменты</h1>
 
 
-   - <h2>В LET , CONST , FUNCTION EXPREESION,FUNCTION EXPRESSION ANONYMOUS,FUNCTION EXPREESION ARROW,FUNCTION IIFE не работает вообще
+   <h2>В LET , CONST , FUNCTION EXPREESION,FUNCTION EXPRESSION ANONYMOUS,FUNCTION EXPREESION ARROW,FUNCTION IIFE не работает вообще
     
         И выйдет ошибки -->
 
@@ -37,7 +37,7 @@
 
          2) is not difined то есть вариейбл вообще не создан
         
-  -   </h2>
+  </h2>
 
 
-  -  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Ceq9cg87--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/kaf11wh85tkhfv1338b4.png" alt="" srcset="">
+   <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Ceq9cg87--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/kaf11wh85tkhfv1338b4.png" alt="" srcset="">

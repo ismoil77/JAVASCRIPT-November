@@ -1,22 +1,23 @@
 // task1
 // function generateSequence(a) {
-//      let b = " "
+//     let ma = a;
+//      let b = ""
 
 //     while (a>1) {
 //         if (a % 2 == 0) {
             
 //             a = a / 2
-//             b += " " + a
+//             b += ", " + a
             
 //         }
 //         else {
           
 //             a = a * 3 + 1
-//             b += " " + a
+//             b += ", " + a
 //         }
         
 //     }
-//     return b
+//     return `"${ma}${b}"`
   
 // }
 // console.log(generateSequence(6));
@@ -35,19 +36,7 @@
 // let a = 6
 // console.log(b = b + " " + a / 2);
 // console.log(b = b + " " + a / 2);
-// console.log(b = b + " " + a / 2);
-// console.log(b = b + " " + a / 2);
-// console.log(b = b + " " + a / 2);
-// console.log(b = b + " " + a / 2);
 
-// console.log(b = b + " " + a / 2);
-// console.log(b = b + " " + a / 2);
-
-// console.log(b = b + " " + a / 2);
-// console.log(b = b + " " + a / 2);
-// console.log(b = b + " " + a / 2);
-
-// console.log(b = b + " " + a / 2);
 
 
 
@@ -68,9 +57,9 @@
 //         }
         
 //     }
-//     return cnt==2?true:false
+//     return cnt==2
 // }
-// console.log(isPalindromePrime(121));
+// console.log(isPalindromePrime(131));
 
 
 
@@ -141,3 +130,12 @@
 // }
 // console.log(quadraticEquationRoots(1,-3,2)
 // );
+
+
+// let a = 5;
+
+// function hh() {
+//     let a = 2
+//     console.log(a);
+// }
+// hh()
