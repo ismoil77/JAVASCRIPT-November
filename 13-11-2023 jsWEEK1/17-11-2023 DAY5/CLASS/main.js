@@ -34,17 +34,17 @@
       
 //     }
 // }
-// console.log(primeInRange(62,66));
+// console.log(primeInRange(10,15));
 
 
 // task3
 
-function numberSquare(a) {
-    let b = 1;
-    for (let i = 1; i <= a; i++){
-        b+=i**2
-        // console.log(b);
-    }
-    return b-1
-}
-console.log(numberSquare(5));
+// function numberSquare(a) {
+//     let b = 1;
+//     for (let i = 1; i <= a; i++){
+//         b+=i**2
+//         // console.log(b);
+//     }
+//     return b-1
+// }
+// console.log(numberSquare(5));
