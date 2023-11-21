@@ -1,46 +1,52 @@
-// WEEK1 DAY1 !!!!!
-// 13-11-2023
+//Recursia
+// function get(a) {
 
-
-
-
-// let m = function (a) {
-//     return function s() {
-         
-//      }
+//     if (a == 1) {
+//         return 1
+//     }
+//    console.log();
+//     return a + get( a-1)
 // }
-
-// console.log(typeof (m));
-
+// console.log(get(10));
 
 
-
-// var a = 6;
-// a = 9;
-// console.log(a);
-
-
-// let b = 7;
-// b = 10;
-// console.log(b);
-
-
-// const c = 8;
-// console.log(c);
-// // Нельзя переименововвать с = 5
-
-// undefined
-// let a;
-// console.log(typeof a);
+// function get(a) {
+//     if (a == 10) {
+//         return 10
+//     }
+//     console.log();
+//     return a + get(a + 1)
+// }
+// console.log(get(0));
 
 
 
-// null type = object
-// let gg = null;
-// console.log(typeof gg);
+
+//closure
+function get(a) {
+    let cnt = 0;
+    return function get2(){
+        return ++cnt
+    }
+}
+let first = get()
+first()
+first()
+first()
+
+console.log(first());
+
+
+let first2 = get()
+first2()
+first2()
+first2()
+
+console.log(first2());
 
 
 
-// indefined type = undefined
-// let jj = undefined;
-// console.log(typeof jj);
+
+
+
+
