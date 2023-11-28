@@ -23,26 +23,26 @@
 
 
 //closure
-function get(a) {
-    let cnt = 0;
-    return function get2(){
-        return ++cnt
-    }
-}
-let first = get()
-first()
-first()
-first()
+// function get(a) {
+//     let cnt = 0;
+//     return function get2(){
+//         return ++cnt
+//     }
+// }
+// let first = get()
+// first()
+// first()
+// first()
 
-console.log(first());
+// console.log(first());
 
 
-let first2 = get()
-first2()
-first2()
-first2()
+// let first2 = get()
+// first2()
+// first2()
+// first2()
 
-console.log(first2());
+// console.log(first2());
 
 
 
