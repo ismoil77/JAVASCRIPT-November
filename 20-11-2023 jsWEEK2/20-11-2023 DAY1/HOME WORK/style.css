@@ -1,0 +1,12 @@
+.container{
+    border: 1px solid black;
+    width: 300px;
+    margin: 10px auto;
+}
+.fontSize{
+    font-size: 30px;
+}
+.shopYou{
+    width: 200px;
+    line-height:30px;
+}

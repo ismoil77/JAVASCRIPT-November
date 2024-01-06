@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "title": "lksdflkgj;sd",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "title": ";asldfj",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "title": "ismoi",
+      "completed": false,
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

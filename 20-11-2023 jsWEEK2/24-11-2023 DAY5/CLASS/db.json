@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "titleJob": "C# Developer",
+      "catJob": "Backend",
+      "level": "Middle",
+      "city": "Dushanbe",
+      "completed": false
+    },
+    {
+      "titleJob": "C# Developer",
+      "catJob": "Frontend",
+      "level": "Junior",
+      "city": "Dushanbe",
+      "completed": false,
+      "id": 2
+    }
+  ],
+  "dataInfoJob": [
+    {
+      "id": 1,
+      "titleJob": "C# Developer",
+      "catJob": "Backend",
+      "level": "Middle",
+      "city": "Dushanbe",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "titleJob": "Javascript developer",
+      "catJob": "Frontend",
+      "level": "Junior",
+      "city": "Dushanbe",
+      "completed": false
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btnCopy">DELETE SAME USER</button>
+    <div class="all" >
+        <div class="all01" style="display: flex;align-items: center;justify-content: space-between;">
+        <div class="all1">
+            <h1 class="userManagement">User Management</h1>
+            <button class="btnNewUser">Create New User</button>
+        </div>
+            <div><fieldset>
+                <legend>ALL STATUS</legend>
+                <select name="" class="select" id="">
+                <option value="all">All</option>
+                <option value="true">Active</option>
+                 <option value="false">Inactive</option>
+            </select>
+            </fieldset></div>
+            
+            <div><input class="searchh" style="width: 250px;height: 50px;border-top-left-radius: 20px ;border-bottom-left-radius: 20px ;" type="text" class=".search" placeholder=""><button style="width: 50px;height: 54px;border-top-right-radius: 20px ;border-bottom-right-radius: 20px ;" >s</button></div>
+            </div>
+      <table>
+        <thead>
+            <th>id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>complited</th>
+            <th colspan="4">Action</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+        
+
+
+
+
+
+    </div>
+    <dialog class="addUserDialog">
+        <form class="addForm">
+            <input type="text" name="inpName" placeholder="NAME">
+            <input type="text" name="inpEmail"placeholder="EMAIL">
+            <button type="submit">ADD</button>
+        </form>
+    </dialog>
+
+    <dialog class="infoDialog">
+
+    </dialog>
+
+    <dialog class="editDialog">
+         <form class="editForm">
+            <input type="text" name="inpName" placeholder="NAME">
+            <input type="text" name="inpEmail"placeholder="EMAIL">
+            <button type="submit">ADD</button>
+        </form>
+    </dialog>
+    <script src="main.js"></script>
+</body>
+</html>

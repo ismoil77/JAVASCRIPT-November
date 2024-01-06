@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="import" href="./index jobInfo.html"> -->
+
+    <title>Document</title>
+</head>
+<body>
+    <p class="pp" >Info About Job</p>
+<div class="" style="display: flex;gap: 20px;justify-content: center;margin-top: 100px;">
+    <p class="pp1 pp"></p>
+    <p class="pp2 pp"></p>
+    <p class="pp3 pp"></p>
+    <p class="pp4 pp"></p>
+</div>
+   
+    <!-- <script src="./js main/dom.js" type="module"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+
+    let pp1 = document.querySelector('.pp1')
+    let pp2 = document.querySelector('.pp2')
+    let pp3 = document.querySelector('.pp3')
+    let pp4 = document.querySelector('.pp4')
+   
+    let user = JSON.parse(localStorage.user);
+    pp1.innerHTML = user.titleJob
+    pp2.innerHTML = user.catJob
+    pp3.innerHTML = user.level
+    pp4.innerHTML = user.city
+
+</script>
+</body>
+</html>

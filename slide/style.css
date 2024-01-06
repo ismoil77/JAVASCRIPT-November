@@ -1,0 +1,9 @@
+.img{
+    animation:anim 1s linear infinite;
+    /* transition: 10s linear infinite; */
+}
+/* @keyframes anim {
+    0%{
+        
+    }
+} */

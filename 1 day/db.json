@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "title": "ismoi",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "title": "ismoil25",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "title": "ismoil4",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "ismoill",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "khaksjf",
+      "completed": false,
+      "id": 6
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

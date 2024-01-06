@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "email": "jsonn@gmail.com",
+      "role": "typicode",
+      "status": true
+    },
+    {
+      "email": "jsonn@gmail.cocsa",
+      "role": "typicode",
+      "status": false,
+      "id": 3
+    },
+    {
+      "email": "a",
+      "role": "",
+      "status": false,
+      "id": 5
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

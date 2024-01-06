@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="div1">
+      <div class="left">
+        <h1>Memeber list</h1>
+        <p>see information about all</p>
+      </div>
+      <div class="center">
+        <button class="dark">dark</button>
+        <button class="light">light</button>
+      </div>
+      <div class="right">
+        <button>Viev All</button>
+        <button class="add">Add</button>
+      </div>
+    </div>
+    <div class="div2">
+      <div class="left1">
+        <select name="" id="" class="select1">
+          <option value="All">All</option>
+          <option value="true">ofline</option>
+          <option value="false">online</option>
+        </select>
+      </div>
+      <div class="right1">
+        <input type="text" placeholder="search" class="search" />
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Member</th>
+          <th>function</th>
+          <th>status</th>
+          <th>employed</th>
+          <th>button</th>
+        </tr>
+      </thead>
+      <tbody class="box"></tbody>
+    </table>
+    <dialog class="dialogAdd">
+      <form class="formAdd">
+        <input type="file" name="img"/>
+        <input placeholder="enter name" type="text" name="name"/>
+        <input placeholder="enter email" type="text" name="email"/>
+        <input placeholder="enter status" type="text" name="status"/>
+        <input placeholder="enter category" type="text" name="category"/>
+        <input placeholder="enter describe" type="text" name="describe"/>
+
+        <button type="submit">Add</button>
+      </form>
+    </dialog>
+    <dialog class="dialogEdit">
+      <form class="formEdit">
+        <input type="file" name="img"/>
+        <input placeholder="enter name" type="text" name="name"/>
+        <input placeholder="enter email" type="text" name="email"/>
+        <input placeholder="enter status" type="text" name="status"/>
+        <input placeholder="enter category" type="text" name="category"/>
+        <input placeholder="enter describe" type="text" name="describe"/>
+        <button type="submit">Eidt</button>
+      </form>
+      <div class="madal">
+        <img class="dell" src="img/delete.jpeg" alt="">
+        <img class="info" src="img/info.jpeg" alt="">
+        <input class="complet" type="checkbox">
+      </div>
+    </dialog>
+    <dialog class="dialogInfo">
+        <button class="close">close</button>
+    </dialog>
+
+
+<div class="rate" style="width: 90%;  margin: 0 auto;">
+  <p class="" style="color: var(--True-Gray-900, #171717);
+text-align: center;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 48px;margin-top: 100px;">Что говорят наши cтуденты о наши курсах</p> 
+<div  style="display: flex;
+padding: 32px 40px;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;"><p class="describeJson" style="color: var(--True-Gray-800, #262626);
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px; /* 150% */;border-radius: 16px;
+border: 3px solid var(--Blue-Gray-200, #E2E8F0);
+background: #FFF;width: 800px;margin: 50px auto;">«Если бы вы спросили меня, стоит ли здесь учиться. Стоит. Если выучить хотя бы ту краткую теорию, что здесь есть, и выполнить вовремя все задачи, какие-то минимальные практические навыки и знания точно получите»</p></div>
+
+<div class="" style="display:flex ;align-items: center;margin: 0 auto;width: 90%;">
+
+<button class="leftButton bb"><</button>
+<div class="" style="display: flex;flex-direction: column;align-items: center;justify-content: center;width: 90%;margin: 0 auto;">
+    <img class="avatarJson" src="./img/man-user-svgrepo-com.svg"  width="250px" height="250px" style="" alt="">
+<!-- src="https://www.svgrepo.com/download/192244/man-user.svg" -->
+
+
+<p class="nameJson" style="color: var(--Primary-900, #212121);
+text-align: center;
+font-family: Montserrat;
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; margin-top: 50px;/* 145.455% */" >Ахмад Абдусамад</p>
+<p style="color: var(--True-Gray-600, #525252);
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */">Курс: <span class="statusJson">Разработчик на С++</span></p>
+</div>
+
+<button style="" class="rightButton bb">></button>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

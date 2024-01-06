@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "Emma Rtte",
+      "avatar": "./img/9T1SxGSw3qw-00-00-24-DAFT PUNK - ROBOT ROCK x FUNK - ( SLOWED ).png",
+      "email": "emma.rtte@gmail",
+      "role": "Administrator",
+      "lastLogin": "Yesterday",
+      "join": "19 aug 2023,11:05 am",
+      "completed": false
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

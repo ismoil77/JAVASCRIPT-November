@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <script src="main.js"></script>
+    <div style="width: 90%;margin: 30px auto;">
+<div class="all" style="display: flex;gap: 50px;justify-content: space-between;">
+        <div style="margin-right: 50px;">
+            <input style="margin-right: 50px;width: 250px;height: 40px;border-radius: 5px;background-color: rgb(211, 212, 213);border: none;" type="search" placeholder="search..." class="search">
+        <select name="" id="" class="select">
+            <option value="ALL">ALL</option>
+            <option value="true">ACTIVE</option>
+            <option value="false">INACTIVE</option>
+        </select>
+        </div>
+        <div class="" style="display: flex;flex-direction: column;gap: 30px;align-items: center;">
+            <button class="invite">+ Invite Users</button>
+            <button class="sort">SORT</button>
+        </div>
+
+    </div>
+    <div>
+        
+    </div>
+    <table id="tbl">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th colspan="4"></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </div>
+    
+
+
+
+    <dialog class="editDialog">
+        <form action="" class="editForm">
+            <input type="text" name="inpTitle" placeholder="email">
+            <input type="text" name="inpRole" placeholder="role">
+            <button type="submit">EDIT</button>
+        </form>
+    </dialog>
+     <dialog class="addDialog">
+        <form action="" class="addForm">
+            <input type="text" name="inpTitle" placeholder="email">
+            <input type="text" name="inpRole" placeholder="role">
+            <button type="submit">EDIT</button>
+        </form>
+    </dialog>
+     <dialog class="infoDialog" style="width: 300px;height: 300px;text-align: center;margin-left: 700px;margin-top: 300px;">
+       <p class="p1" style="font-size: 30px;"></p>
+       <p class="p2" style="font-size: 30px;"></p>
+       <p class="p3" style="font-size: 30px;"></p>
+    </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
 </body>
 </html>

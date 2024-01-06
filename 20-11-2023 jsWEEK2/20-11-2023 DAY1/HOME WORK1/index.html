@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TODO ASYNC</title>
+</head>
+<body>
+    <div class="all">
+        <div class="line1"  style="display: flex;align-items: center;justify-content: space-between;">
+            <h1 class="userList">User List</h1>
+            <div class="modeMore2">
+                <button class="btnAddNewUser"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="white"/></svg> NEW</button>
+               
+            
+                <button class="btnLight"><img src="./img/light_mode.svg" alt=""> LIGHT</button>
+                <button class="btnDark">DARK<img src="./img/dark_mode.svg" alt=""></button>
+
+            </div>
+        </div>
+
+        <div class="line2" style="display: flex;justify-content: space-between;">
+            <div class="lineSelect" style="display: flex;" >
+                  <fieldset style="display: flex; align-items: center;width: 250px;justify-content: space-between;">
+                <legend>Status</legend>
+                <form action="">
+                    <select name="" id="" class="selectStatus">
+                        <option name="" id="" value="al">All Status</option>
+                       <option name="" id="" value="true">Active</option>
+                       <option name="" id="" value="false">Inactive</option>
+                    </select>
+                    
+                </form>
+             </fieldset>
+             <fieldset style="display: flex; align-items: center;width: 250px;justify-content: space-between;">
+                <legend>City</legend>
+                <form action="">
+                    <select name="" class="selectCity" id="">
+                       <option name="" id="" value="all">All Cities</option>
+                       <option name="" id="" value="Dushanbe">Dushanbe</option>
+                       <option name="" id="" value="Bokhtar">Bokhtar</option>
+                       <option name="" id="" value="Khujand">Khujand</option>
+                    </select>
+                </form>
+                
+             </fieldset>
+            </div>
+            <div class="lineSearch" style="display: flex;">
+                <fieldset style="display: flex; align-items: center;width: 250px;justify-content: space-between;">
+                    <legend>Search</legend>
+                    <form action="">
+                        <input type="text" class="inputSearch" placeholder="Name, email, etc..." style="border: WHITE 1px solid;">
+                    </form>
+                    <img src="./img/SearchFilled.svg" alt="">
+                </fieldset>
+            </div>
+           
+        </div>
+        <div class="line3">
+            <table class="table tablee" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th class="ava"><img src="./img/user Icon.svg" alt="">Name</th> 
+                        <th><img src="./img/Lock.svg" alt="">Город</th>
+                        <th><img src="./img/Timer.svg" alt="">Status<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none"><path d="M7.41666 5.18937V14.625C7.41666 14.8321 7.58456 15 7.79166 15H9.54166C9.74875 15 9.91666 14.8321 9.91666 14.625V5.18937H11.356C12.0242 5.18937 12.3588 4.38152 11.8863 3.90902L9.197 1.21968C8.90409 0.926773 8.42922 0.926773 8.13634 1.21968L5.447 3.90902C4.97453 4.38149 5.30916 5.18937 5.97734 5.18937H7.41666Z" fill="#40464C"/></svg></th>
+                        <th><img src="./img/tag.svg" alt="">Phone</th>
+                        <th><svg xmlns="http://www.w3.org/2000/svg" width="65" height="50" viewBox="0 0 65 50" fill="none"><line x1="0.00012207" y1="49.35" x2="65.0001" y2="49.35" stroke="#D5DBE1" stroke-width="1.3"/></svg></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="modalAll">
+        <p class="viewInfo"><img src="./img/user Icon.svg" alt="">View profile</p>
+        <p class="viewEdit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2.99878 17.2512V21.0012H6.74878L17.8088 9.94125L14.0588 6.19125L2.99878 17.2512ZM20.7088 7.04125C21.0988 6.65125 21.0988 6.02125 20.7088 5.63125L18.3688 3.29125C17.9788 2.90125 17.3488 2.90125 16.9588 3.29125L15.1288 5.12125L18.8788 8.87125L20.7088 7.04125Z" fill="black" fill-opacity="0.56"/></svg>Edit</p>
+        <p class="delBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="#EF4444"/></svg>delete</p>   
+        
+    </div>
+    <dialog class="viewProfile">
+          <div class="lineDialog1">
+            <button class="closeVief"><img src="./img/clearclose.svg" alt=""></button>
+            <p>User info</p>
+
+          </div>
+          <img src="" alt="" class="infoImg">
+          <p class="nameDialog"></p>
+          <p class="emailDialog"></p>
+    </dialog>
+    <dialog class="dialogEdit">
+        <form action="" class="editForm">
+            <input type="text" name="inpImg">
+            <input type="text" name="inpTitle">
+            <input type="text" name="inpEmail">
+             
+                    <select name="inpCity" id="" >
+                        
+                       <option name="" id="" value="Dushanbe">Dushanbe</option>
+                       <option name="" id="" value="Bokhtar">Bokhtar</option>
+                       <option name="" id="" value="Khujand">Khujand</option>
+                    </select>
+            
+            <input type="text" name="inpPhone">
+            <button type="submit">ADD</button>
+
+        </form>
+    </dialog>
+    <dialog class="dialogAddUser">
+        <form action="" class="addForm">
+            <input type="text" name="inpImg" placeholder="img">
+            <input type="text" name="inpTitle" placeholder="Fullname">
+            <input type="text" name="inpEmail"placeholder="email">
+             
+                    <select name="inpCity" class="selectCity" id="" >
+                        
+                       <option name="" id="" value="Dushanbe">Dushanbe</option>
+                       <option name="" id="" value="Bokhtar">Bokhtar</option>
+                       <option name="" id="" value="Khujand">Khujand</option>
+                    </select>
+            
+            <input type="number" name="inpPhone" placeholder="phone">
+            <button type="submit">ADD</button>
+
+        </form>
+    </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "title": "Casual shirt",
+      "price": "45",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/584.jpg",
+      "kolvo": 11,
+      "city": "Norwalk",
+      "status": true,
+      "id": "17"
+    },
+    {
+      "title": "shirtrt black ",
+      "price": "10000",
+      "avatar": "https://www.mrporter.com/variants/images/3633577411310824/in/w2000_q60.jpg",
+      "kolvo": 2,
+      "status": false,
+      "id": "lnWnWXe"
+    },
+    {
+      "title": "Shirt anime",
+      "price": "150",
+      "avatar": "https://m.media-amazon.com/images/I/A13usaonutL._AC_CLa%7C2140%2C2000%7C91c-hKOqOrL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_UY580_.png",
+      "kolvo": 3,
+      "status": false,
+      "id": "YTJp4QS"
+    }
+  ]
+}

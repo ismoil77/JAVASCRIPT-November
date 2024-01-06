@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "img": "./img/light-and-fluffy-buttermilk-pancakes.jpg",
+      "title": "Butter",
+      "price": "15.99",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente et possimus! Consectetur, iste assumenda.",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "img": "./img/light-and-fluffy-buttermilk-pancakes.jpg",
+      "title": "Milk",
+      "price": "15.99",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente et possimus! Consectetur, iste assumenda.",
+      "completed": 0,
+      "id": 5
+    },
+    {
+      "img": "./img/light-and-fluffy-buttermilk-pancakes.jpg",
+      "title": "Pancakes",
+      "price": "15.99",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente et possimus! Consectetur, iste assumenda.",
+      "completed": 0,
+      "id": 6
+    },
+    {
+      "img": "https://cdn.britannica.com/77/200377-050-4326767F/milk-splashing-glass.jpg",
+      "title": "Milk",
+      "price": "9.99",
+      "description": "Lorem ipsum dolr sit amet consectetur adipisicing elit. Ducimus sapiente et possimus! Consectetur, iste assumenda.",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "img": "sajhdlkja",
+      "title": "Butter",
+      "price": "",
+      "description": "",
+      "completed": false,
+      "id": 8
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

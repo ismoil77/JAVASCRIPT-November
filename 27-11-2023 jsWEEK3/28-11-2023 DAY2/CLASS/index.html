@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="all" style="width: 95%;margin: 0 auto;display: flex;justify-content: space-between;align-items: center;">
+
+
+
+        <div class="">
+            <h1 style="font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 600;">Members List</h1>
+            <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 500;color: rgb(113, 113, 113);">See information about all memebers</h2>
+            <div class="" style="display: flex; gap: 20px;">
+                <h2 >All</h2>
+                <h2>Monitored</h2>
+                <h2>Unmonitored</h2>
+            </div>
+        </div>
+      
+<div class="" style="display: flex;flex-direction: column;gap: 80px;">
+        <div class= "" style="display: flex;gap: 15px;">
+        <button>VIEW ALL</button>
+        <button class="btnAdd">+ADD MEMBERS</button>
+        
+    </div>
+    <div class="">
+
+        <input type="search" name="" id="" class="search" placeholder="search..">
+    </div>
+
+    </div>
+
+
+    </div>
+
+
+
+
+
+
+  <table>
+    <thead>
+        <tr>
+            <th class="mem">Member</th>
+            <th class="fun">Function</th>
+            <th class="sta">Status</th>
+            <th class="emp">Employed</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+
+  </table>
+
+
+
+
+<dialog class="dialogUser">
+    <form action="" class="addForm">
+        <input type="file" name="inpImg" id="" placeholder="img">
+        <input type="text" name="inpTitle" id="" placeholder="name">
+        <input type="text" name="inpEmail" id="" placeholder="email">
+        <input type="text" name="inpJob" id="" placeholder="job">
+        <input type="text" name="inpPlace" id="" placeholder="place">
+        <input type="date" name="inpDate" placeholder="date">
+        <button type="submit">ADD</button>
+
+
+    </form>
+
+</dialog>
+<dialog class="dialogEdit">
+    <form action="" class="editForm">
+        <input type="file" name="inpImg" id="" placeholder="img">
+        <input type="text" name="inpTitle" id="" placeholder="name">
+        <input type="text" name="inpEmail" id="" placeholder="email">
+        <input type="text" name="inpJob" id="" placeholder="job">
+        <input type="text" name="inpPlace" id="" placeholder="place">
+        <input type="date" name="inpDate" placeholder="date">
+        <button type="submit">ADD</button>
+
+
+    </form>
+
+
+
+</dialog>
+<dialog class="alllModal">
+    <button class="editBtn">EDIT</button>
+    <button class="del">DELETE</button>
+    <input type="checkbox" class="check">
+</dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>

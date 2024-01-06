@@ -1,0 +1,224 @@
+/* *{
+margin: 0;
+padding: 0;
+} */
+
+.blockList{
+    width: 50px;
+
+}
+.inverr{
+      width: 30px;
+  filter: invert();
+
+}
+.invertt{  
+    display: flex;align-items: center;justify-content: center;
+    width: 50px;height: 50px;
+background-color: rgb(5, 8, 13);
+
+}
+.blockList1{
+    /* width: 50px; */
+    
+
+}
+.fullName12{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.phone12{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: grey;
+}
+.group12{
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: grey;
+}
+.li12{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+.mentor{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    
+
+}
+
+.search::placeholder{
+   font-size: 20px ;
+}
+fieldset{
+    border-radius: 10px;
+    width: 200px;
+    height: 80px;
+}
+.search:focus{
+    outline: none;
+}
+table{
+    width: 100%;
+    margin-top: 50px;
+    
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+    padding: 15px 15px;
+}
+td{
+       text-align: left;
+    padding: 15px 15px;
+}
+.gr{
+    width: fit-content;
+    border:none;
+    background-color:rgb(173, 171, 171) ;
+    border-radius:15px ;
+    padding: 7px;
+}
+.tdDiv{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+thead{
+    background-color:rgb(216, 213, 213) ;
+}
+tr:hover{
+    background-color:rgb(216, 213, 213) ;
+    
+}
+tbody{
+    color: rgb(36, 36, 36);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+table{
+    display: none;
+}
+.btnAdd{
+    height: 50px;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-style: oblique;
+    color: rgb(54, 107, 53);
+    border: 1px solid green;
+    background-color: rgb(141, 223, 141);
+    box-shadow: 10px 10px 10px;
+
+}
+.btnAdd:active{
+    height: 50px;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 7px;
+    box-shadow:3px 3px 3px ;
+
+}
+
+input{
+    width: 300px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+}
+input::placeholder{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+}
+input:first-child{
+    width: 320px;
+    border-radius: 0px;
+
+}
+.search{
+    border: none;
+    background-color: rgb(232, 232, 232);
+    border-radius: 10px;
+    
+    font-size: 20px;
+    
+}
+select{
+    width: 300px;
+ font-size: 20px;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+ font-style: italic;
+    text-align: center;
+}
+option{
+    border: 1px solid black;
+}
+option:hover{
+    color: aliceblue;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.btnn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #1b882e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btnn .spann {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btnn .spann:after {
+  content: "+";
+  position: absolute;
+  opacity: 0;
+  top: 0;   
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btnn:hover .spann {
+  padding-right: 25px;
+}
+
+.btnn:hover .spann:after {
+  opacity: 1;
+  right: 0;
+}
+label{
+font-size: 20px;
+font-weight: 600;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-style: oblique;
+}
+.ssd{
+    display: flex;
+    width: 800px;
+    align-items: center;
+    gap: 10px;
+}

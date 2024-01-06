@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <script src="main.js"></script>
+    <button class="dark">DARK</button>
+    <button class="light">light</button>
+    <button class="sort">sort</button>
+    <button class="delDup">DELETE DUPLICAT</button>
+    <input type="search" class="search" placeholder="search...">
+    <select name="" id="" class="select">
+        <option value="all">ALL</option>
+        <option value="true">true</option>
+        <option value="false">false</option>
+    </select>
+<button class="add">ADD</button>
+
+        <table class="" id="customers">
+              <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>STATUS</th>
+                <th colspan="3">action</th>
+            </tr>
+              </thead>
+              <tbody class="box">
+            
+              </tbody>
+        </table>
+
+
+
+
+
+<button class="add2">ADD</button>
+
+        <div class="box1">
+            
+        </div>
+    <dialog class="addDialog">
+        <form action="" class="formAdd">
+            <input type="text" name="inpTitle">
+            <button type="submit">ADD</button>
+        </form>
+    </dialog>
+    <dialog class="editDialog">
+        <form action="" class="formEdit">
+            <input type="text" name="inpTitle">
+            <button type="submit">edit</button>
+        </form>
+    </dialog>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
 </body>
 </html>

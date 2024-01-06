@@ -1,0 +1,18 @@
+.red
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.yellow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.green
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

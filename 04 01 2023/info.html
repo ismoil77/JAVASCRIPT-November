@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3498db;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .content {
+      text-align: left;
+      width: 80%;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .flag {
+      width: 100%;
+      height: 200px;
+      /* background: linear-gradient(147deg, #ff0000 25%, #fcd116 25%, #fcd116 50%, #ff0000 50%, #ff0000 75%, #fcd116 75%, #fcd116 100%); */
+    }
+
+    .info {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to <span class="countr4"></span></h1>
+  </header>
+
+  <main>
+    <div class="content">
+      <div class=""><img src="" class="flag" alt=""></div>
+      <div class="info">
+        <h1 class="countr1"></h1>
+        <p><span class="countr2"></span> is a beautiful country located in southwestern Europe. It is known for its rich history, diverse culture, and stunning landscapes. The capital city is Madrid, and the official language is Spanish.</p>
+        <p><span class="countr3"></span> is famous for its delicious cuisine, flamenco music and dance, and world-renowned artists like Pablo Picasso and Salvador Dalí. The country has a Mediterranean climate with hot summers and mild winters.</p>
+      </div>
+    </div>
+   <a class="aa"> <button class="btnMap">MAP</button></a>
+  </main>
+<script>
+let user = JSON.parse(localStorage.user);
+document.querySelector('.flag').src = user.flag
+// document.querySelectorAll('.countr').innerHTML = user.title
+document.querySelector('.countr1').innerHTML = user.title
+document.querySelector('.countr2').innerHTML = user.title
+document.querySelector('.countr3').innerHTML = user.title
+document.querySelector('.countr4').innerHTML = user.title
+document.querySelector('.aa').href = user.mapp
+console.log(user.title);
+
+
+</script>
+</body>
+</html>

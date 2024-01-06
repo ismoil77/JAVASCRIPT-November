@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <script src="main.js"></script>
+    <div style="width:100%;height: 70px;background-color: rgb(18, 18, 39);position:static;display: flex;align-items: center;justify-content: space-between;"><p style="color: aliceblue;font-size: 30px;">Clothing Store</p><img class="shopCart" src="img/shopping-cart-icon-512x462-yrde1eu0.png" width="30px" height="30px" alt="" style="background-color: aliceblue;"></div>
+    <div class="box" style="border:2px solid black;display: flex;flex-direction: column;width:100%;margin:0 auto;text-align: center;">
+        <h1 class="totalBill"></h1>
+        <div class="" style="display: flex;margin: 0 auto;text-align: center;">
+        <button class="checkOut">CheckOut</button>
+        <button class="clearCart">Clear Cart</button>
+        <button class="add">ADD TOVAR</button>
+        </div>
+        <div class="box1"></div>
+    
+</div>
+<dialog class="shopYou">
+    
+</dialog>
+<dialog class="dialogAdd">
+    <form action="" class="formAdd">
+          <input type="text" name="inpAvatar" placeholder="avatar">
+        <input type="text" name="inpTovar" placeholder="tovar">
+        <input type="text" name="inpPrice" placeholder="price">
+        <input type="text" name="inpKolvo" placeholder="kolvo" value="0">
+      <button type="submit">ADD</button>
+
+    </form>
+</dialog>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "title": "AL",
+      "completed": true,
+      "id": 16
+    },
+    {
+      "title": "ismoil",
+      "completed": false,
+      "id": 17
+    },
+    {
+      "title": "ab",
+      "completed": false,
+      "id": 18
+    }
+  ],
+  "posts2": [
+    {
+      "id": 3,
+      "title": "json-server",
+      "author": "typicode",
+      "completed": false
+    },
+    {
+      "title": "json-ser",
+      "completed": true,
+      "id": 4
+    },
+    {
+      "id": 6,
+      "title": "json-server",
+      "author": "typicode",
+      "completed": false
+    },
+    {
+      "title": "ismoil",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "title": "d",
+      "completed": false,
+      "id": 8
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

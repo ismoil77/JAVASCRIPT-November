@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.div1 {
+  height: 10vh;
+  padding: 0 200px;
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 30px; */
+  align-items: center;
+}
+.left {
+  width: 30%;
+}
+.left h1 {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+.left p {
+  font-size: 25px;
+  color: grey;
+}
+.right {
+  width: 30%;
+  display: flex;
+  gap: 50px;
+}
+.right button {
+  width: 100px;
+  height: 50px;
+  border: 3px solid black;
+  color: black;
+  background-color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.div2 {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 200px;
+  align-items: center;
+}
+.right1 input {
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  color: grey;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 3px solid black;
+  outline: none;
+}
+.left1 select {
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  /* border-radius: 10px; */
+  margin-top: 10px;
+  border: 3px solid black;
+  outline: none;
+}
+.table {
+  width: 80%;
+  margin: 0 10%;
+  margin-top: 50px;
+  border-collapse: collapse;
+}
+th {
+  height: 80px;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  background-color: whitesmoke;
+  font-size: 28px;
+  font-family: roboto;
+  color: rgb(90, 90, 90);
+}
+.td {
+  height: 100px;
+  border-bottom: 3px solid grey;
+}
+.hidden{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: grey;
+    display: inline-block;
+    color: white;
+}
+.td h1 {
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+}
+.img-user{
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+}
+.div-user{
+    display: flex;gap: 20px;
+    align-items: center;
+}
+.img-edit{
+    width: 60px;
+    height: 60px;
+    /* margin-left: 50px; */
+}
+/* .dialogAdd{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    padding-top: 30px;
+}
+.dialogAdd input{
+    width: 70%;
+    margin: auto;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    color: brown;
+    display: block;
+    margin: auto;
+        margin-top: 10px;
+
+}
+.dialogAdd button{
+    width: 150px;
+    height: 50px;
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+.dialogEdit{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    padding-top: 30px;
+}
+.dialogEdit input{
+    width: 70%;
+    margin: auto;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    color: brown;
+    display: block;
+    margin: auto;
+        margin-top: 10px;
+
+}
+.dialogEdit button{
+    width: 150px;
+    height: 50px;
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+} */
+.dark{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    background-color: grey;
+}
+.light{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    background-color: white;
+}
+.madal{
+    display: flex;
+    justify-content: center;
+    padding: 0 200px;
+    gap: 20px;  
+    align-items: center;
+}
+.madal img{
+    width: 50px;
+    height: 50px;
+}
+.madal input{
+    accent-color: rgb(0, 200, 255);
+    zoom: 2;
+}
+.dialogInfo{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    padding-top: 10px;  
+}
+.dialogEdit h1{
+    text-align: center;
+    margin: auto;
+}
+.dialogInfo img{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+.dialogInfo button{
+    width: 70px;
+    height: 40px;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    margin: auto;
+}
+
+.bb{
+  font-size: 50px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: white;
+  border: none;
+
+}
+.bb:active{
+  border: 3px solid green;
+  background-color: rgb(164, 181, 164);
+ /* filter: grayscale(10%); */
+}
+

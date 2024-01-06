@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.searchInp{
+    border: 1px solid #fff;
+    
+}
+.searchInp:focus{
+    outline: #fff;
+}
+.selectRegion{
+    outline: #fff;
+
+}
+.llink{
+    text-decoration: none;
+    color: #fff;
+
+}
+.ddr{
+    background-color: black;
+    color: white;
+}
+.obb{
+    filter: invert();
+}

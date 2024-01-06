@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список дел с уровнями</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    #todoList {
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    #todoList ul {
+      list-style: none;
+      padding: 0;
+    }
+    #todoList li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 8px;
+    }
+    #todoList button {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    #todoInput, #levelSelect {
+      margin-bottom: 10px;
+      padding: 6px;
+    }
+    dialog {
+      margin: 0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="todoList">
+    <h2>Список дел с уровнями</h2>
+    <button id="openAddModalButton">Добавить задачу</button>
+    <ul id="tasks"></ul>
+  </div>
+
+  <!-- Add Task Modal -->
+  <dialog id="addTaskModal">
+    <input type="text" id="modalTodoInput" placeholder="Добавить новую задачу">
+    <select id="modalLevelSelect">
+      <option value="easy">Легко</option>
+      <option value="medium">Средне</option>
+      <option value="hard">Трудно</option>
+    </select>
+    <button id="addModalButton">Добавить</button>
+    <button id="cancelModalButton">Отмена</button>
+  </dialog>
+
+  <!-- Edit Task Modal -->
+  <dialog id="editTaskModal">
+    <input type="text" id="modalEditTodoInput" placeholder="Изменить задачу">
+    <select id="modalEditLevelSelect">
+      <option value="easy">Легко</option>
+      <option value="medium">Средне</option>
+      <option value="hard">Трудно</option>
+    </select>
+    <label for="modalEditCompleted">Завершено:</label>
+    <input type="checkbox" id="modalEditCompleted">
+    <button id="editModalButton">Сохранить</button>
+    <button id="cancelEditModalButton">Отмена</button>
+  </dialog>
+
+  <script>
+    // Helper function to create HTML elements
+    function createElement(tag, attributes = {}, textContent = '') {
+      const element = document.createElement(tag);
+      for (const key in attributes) {
+        element.setAttribute(key, attributes[key]);
+      }
+      element.textContent = textContent;
+      return element;
+    }
+
+    // Helper function to create task element
+    function createTaskElement(task, index) {
+      const li = createElement('li');
+      li.innerHTML = `
+        <span>${task.text}</span>
+        <span>${task.level}</span>
+        <span>${task.completed ? 'Завершено' : 'Не завершено'}</span>
+        <button data-index="${index}">Изменить</button>
+        <button data-index="${index}">Удалить</button>
+      `;
+      return li;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const openAddModalButton = document.getElementById('openAddModalButton');
+      const addTaskModal = document.getElementById('addTaskModal');
+      const modalTodoInput = document.getElementById('modalTodoInput');
+      const modalLevelSelect = document.getElementById('modalLevelSelect');
+      const addModalButton = document.getElementById('addModalButton');
+      const cancelModalButton = document.getElementById('cancelModalButton');
+
+      const editTaskModal = document.getElementById('editTaskModal');
+      const modalEditTodoInput = document.getElementById('modalEditTodoInput');
+      const modalEditLevelSelect = document.getElementById('modalEditLevelSelect');
+      const modalEditCompleted = document.getElementById('modalEditCompleted');
+      const editModalButton = document.getElementById('editModalButton');
+      const cancelEditModalButton = document.getElementById('cancelEditModalButton');
+
+      const tasksList = document.getElementById('tasks');
+
+      // Load tasks from localStorage
+      const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+      // Function to render tasks
+      function renderTasks() {
+        tasksList.innerHTML = '';
+        tasks.forEach(function(task, index) {
+          const taskElement = createTaskElement(task, index);
+          tasksList.appendChild(taskElement);
+        });
+      }
+
+      // Initial rendering
+      renderTasks();
+
+      // Function to add a new task
+      function addTask() {
+        const newTaskText = modalTodoInput.value.trim();
+        const newTaskLevel = modalLevelSelect.value;
+        if (newTaskText !== '') {
+          const newTask = { text: newTaskText, level: newTaskLevel, completed: false };
+          tasks.push(newTask);
+          localStorage.setItem('tasks', JSON.stringify(tasks));
+          renderTasks();
+          modalTodoInput.value = '';
+          addTaskModal.close();
+        }
+      }
+
+      // Function to edit a task
+      window.editTask = function(index) {
+        modalEditTodoInput.value = tasks[index].text;
+        modalEditLevelSelect.value = tasks[index].level;
+        modalEditCompleted.checked = tasks[index].completed;
+
+        editModalButton.onclick = function() {
+          tasks[index].text = modalEditTodoInput.value;
+          tasks[index].level = modalEditLevelSelect.value;
+          tasks[index].completed = modalEditCompleted.checked;
+          localStorage.setItem('tasks', JSON.stringify(tasks));
+          renderTasks();
+          editTaskModal.close();
+        };
+
+        cancelEditModalButton.onclick = function() {
+          editTaskModal.close();
+        };
+
+        editTaskModal.showModal();
+      };
+
+      // Function to remove a task
+      window.removeTask = function(index) {
+        tasks.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        renderTasks();
+      };
+
+      // Event listener for opening the add task modal
+      openAddModalButton.addEventListener('click', function() {
+        addTaskModal.showModal();
+      });
+
+      // Event listener for adding a new task using the modal
+      addModalButton.addEventListener('click', function() {
+        addTask();
+      });
+
+      // Event listener for cancelling the add task modal
+      cancelModalButton.addEventListener('click', function() {
+        addTaskModal.close();
+      });
+
+      // Event listener for window close (canceling modals)
+      window.addEventListener('click', function(event) {
+        if (event.target === addTaskModal) {
+          addTaskModal.close();
+        } else if (event.target === editTaskModal) {
+          editTaskModal.close();
+        }
+      });
+
+      // Event listener for key press (closing modals with Escape)
+      window.addEventListener('keyup', function(event) {
+        if (event.key === 'Escape') {
+          addTaskModal.close();
+          editTaskModal.close();
+        }
+      });
+
+      // Event delegation for task buttons
+      tasksList.addEventListener('click', function(event) {
+        const target = event.target;
+        const index = target.dataset.index;
+        if (target.tagName === 'BUTTON' && index !== undefined) {
+          if (target.textContent === 'Изменить') {
+            editTask(index);
+          } else if (target.textContent === 'Удалить') {
+            removeTask(index);
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,87 +1,186 @@
-// tas1
-// function sum(a) {
-//     if (a == 1) {
-//         return 1
+let api = 'http://localhost:3000/data'
+let shopCart = document.querySelector('.shopCart')
+let totalBill = document.querySelector('.totalBill')
+let checkOut = document.querySelector('.checkOut')
+let clearCart = document.querySelector('.clearCart')
+let box1 = document.querySelector('.box1')
+let shopYou = document.querySelector(".shopYou")
+let dialogAdd = document.querySelector('.dialogAdd')
+let add = document.querySelector('.add')
+let formAdd = document.querySelector('.formAdd')
+clearCart.onclick = () => {
+    box1.innerHTML=""
+}
+add.onclick = () => {
+    dialogAdd.showModal()
+}
+formAdd.onsubmit = () => {
+    let newTovar = {
+        "title": formAdd['inpTovar'].value,
+        "price": formAdd['inpPrice'].value,
+        "avatar": formAdd['inpAvatar'].value,
+        "kolvo": 0,
+        "status": false,
+    }
+    addTovar(newTovar)
+    dialogAdd.close()
+}
+// async function getData() {
+//     try {
+//         const {data} = await axios.get(api)
+//         get(data)
+//     } catch (error) {
+//         console.log(error);
 //     }
+// }
+
+
+async function getData() {
+    try {
+        const response = await fetch(api)
+        const data = await response.json()
+        get(data)
+    } catch (error) {
+        console.log(error);
+    }
+}
+let con = ""
+let conu = 1
+let allKolvo = 0
+let ttt = 0
+function get(data) {
+    box1.innerHTML = ''
+    data.forEach((elem) => {
+        let container = document.createElement('div')
+        container.classList.add('container')
+        let img = document.createElement('img')
+        img.style.width = '300px'
+        img.src = elem.avatar
+
+        let plusBtn = document.createElement('p')
+        plusBtn.innerHTML = '+'
+        plusBtn.classList.add('fontSize')
+        let minusBtn = document.createElement('p')
+        minusBtn.innerHTML = '-'
+        minusBtn.classList.add('fontSize')
+
+        let title = document.createElement("h3")
+        title.innerHTML = elem.title
+        
+        let price = document.createElement("h3") 
+        price.innerHTML = `$${elem.price}`
+        
+        let uprav = document.createElement('div')
+        uprav.style.display = 'flex'
+        uprav.style.gap = '5px'
+        uprav.style.justifyContent = 'center'
+        let kolvo = document.createElement('h3')
+        kolvo.innerHTML = elem.kolvo
+        kolvo.classList.add('fontSize')
+        let btnDel = document.createElement('button')
+        btnDel.innerHTML = "delete"
+        btnDel.onclick = async () => {
+            try {   
+                const response = await fetch(`${api}/${elem.id}`, {
+                    method:'DELETE'
+                })
+                getData()
+            } catch (error) {
+                
+            }
+        }
+        minusBtn.onclick = () => {
+            if (elem.kolvo <= 0) {
+                elem.kolvo = 0
+            }
+            else if (elem.kolvo>0) {
+                elem.kolvo--
+            }
+            
+            
+            kolvoIzmen(elem,elem.id)
+        }
+        plusBtn.onclick = () => {
+            
+            elem.kolvo++
+            
+            
+            
+            kolvoIzmen(elem, elem.id)
+        }
+        let resul = Number(elem.kolvo) * Number(elem.price)
+        let result = document.createElement('h3')
+        ttt = resul
+        result.innerHTML = "$"+Number(elem.kolvo)*Number(elem.price)
+        allKolvo+=resul
+        totalBill.innerHTML = `Total Bill: $${allKolvo}`
+
+         let boxu = document.createElement('div')
+            boxu.append(img, title, price, uprav, result)
+        con = con + " " + conu++ + ") " + "Tovar: " + elem.title + " price: " + elem.price + "$" + " количество: " + elem.kolvo + "шт;  cумма" + ttt + " $||| " + " " 
+        
+        console.log(boxu);
+        uprav.append(minusBtn, kolvo, plusBtn)
+        container.append(btnDel,img,title,price,uprav,result)
+        box1.append(container)
+    })
+}
+let ioo = ''
+let gh = 0
+shopCart.onclick = () => { 
+
+    gh =  "К оплате картой: " + allKolvo + "$"
+    let diiv = document.createElement('div')
+      diiv.append(con)  
+    shopYou.showModal()
+    con = ''
     
-//     return a+ sum(a-1)
-// }
-// console.log(sum(12));
+    shopYou.append(diiv,gh)
+   
+}
 
-// task2
-// function factorial(a) {
-//     if (a == 1) {
-//         return 1
-//     }
-    
-//     return a* factorial(a-1)
-// }
-// console.log(factorial(4));
+shopYou.onclick = ()=> {
+    shopYou.close()
+    gh =0
+}
+
+
+getData()
 
 
 
-// task3 
-// function sumDigit(a)
-// {
-//     if (a == 0) {
-//       return 0
-//     }
-//     return a%10+ sumDigit(Math.floor(a/10))
-// }
-// console.log(sumDigit(111));
-
-
-// task4
-// function doubleFactorial(a) {
-//     if (a <= 1){return 1}
-//   return a*doubleFactorial(a-2)
-// }
-// console.log(doubleFactorial(0));
-
-
-// task5
-// function fibo(a){
-// if (a == 0){
-//     return 0
-// }
-// else if (a==1){
-//     return 1
-// }
-// return fibo(a - 1) + fibo(a - 2)
-// }
-// console.log(fibo(4));
-
-
-
-// task6 90%
-// function makePlusFunction(a){
-//     return function plusFive(b){
-//        return console.log(a+b)
-//     }
-// }
-// const plusFive = makePlusFunction(5)
-// plusFive(2)
-// plusFive(-8)
-// const plusTen = makePlusFunction(10)
-// plusTen(0)
-// plusTen(188)
-// plusFive(plusTen(0))
-
-
-// task7
-// function product(a, b) {
-//     return function (c, d) {
-//         return function (e, f) {
-//             return a*c*e+b*d*f
-//         }
+// async function kolvoIzmen(elem, id) {
+//     try {
+//         const {data} = await axios.put(`${api}/${id}`,elem)
+//     } catch (error) {
+//         console.log(error);
 //     }
 // }
 
-// console.log(product(1, 2)(1, 1)(2, 3));
+async function addTovar(newTovar) {
+    try {
+        const { data } = await axios.post(`${api}`, newTovar)
+        getData()
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 
-// task8   Kak 90%
-// function multiply(a, b) {
-//     return Math.floor(a * b)
-// }
-// console.log(multiply(-9,-3));
+
+async function kolvoIzmen(elem, id) {
+    try {
+        const response = await fetch(`${api}/${id}`,
+            {
+                method: "PUT",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(elem),
+            });
+    }
+       catch (error) {
+        console.log(error);
+    }
+}

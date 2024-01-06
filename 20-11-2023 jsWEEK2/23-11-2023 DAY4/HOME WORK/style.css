@@ -1,0 +1,35 @@
+.uniBtn{
+    border-top:1px solid rgb(148, 116, 36) ;
+    border-left:1px solid rgb(148, 116, 36) ;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 7px 12px;
+    color:rgb(148, 116, 36) ;
+    width: fit-content;
+
+}
+.price{
+    color: rgb(148, 116, 36);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 600;
+}
+.title{
+    color: rgb(8, 6, 44);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 800;
+}
+
+.descc{
+    color: rgb(113, 111, 121);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 500;
+}
+.checc{
+    width: 50px;
+    height: 30px;
+    vertical-align: bottom;
+    border: 3px solid goldenrod;
+    background-color: rgb(240, 240, 245);
+  
+}
+.checc:checked{
+  background-color: rgb(64, 88, 88);
+  border: 3px solid goldenrod;
+}

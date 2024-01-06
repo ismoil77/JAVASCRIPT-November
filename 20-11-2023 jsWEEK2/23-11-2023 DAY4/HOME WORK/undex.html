@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
-    <script src="22main.js"></script>
+<body style="background-color: rgb(240, 240, 245);">
+<div class="all" style="width: 80%;margin: 0px auto;display: flex;flex-direction: column;justify-content: center;">
+       <p class="" style="text-align: center;font-size: 40px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 580;color: rgb(15, 15, 68);">Our Menu</p>
+       <button class="uniBtn addFood" style="margin-left: 45.5%;margin-bottom: 50px;">ADD FOOD</button>
+
+        <p style="text-align: center;margin-top: -50px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 900;color: rgb(148, 116, 36);">_________</p>
+      <div class="" style="display: flex;justify-content: center;gap: 15px;margin-top: 30px;">
+           <button class="uniBtn btnAll" value="All">All</button>
+       <button class="uniBtn btnButter" value="Butter">Butter</button>
+       <button class="uniBtn btnPancakes" value="Pancakes">Pancakes</button>
+       <button class="uniBtn btnMilk" value="Milk">Milk</button>
+      </div>
+     <div class="box" style="display: flex;flex-wrap: wrap;">
+    
+    </div>
+
+
+    
+</div>
+
+<dialog class="addDialog">
+    <form action="" class="addForm">
+        <input type="text" name="inpImg" placeholder="img">
+       <select name="inpTitle" id="">
+            <option value="Butter">Butter</option>
+            <option value="Milk">Milk</option>
+            <option value="Pancakes">Pancakes</option>
+        </select>
+        <input type="text" name="inpDesc" placeholder="description">
+        <input type="text" name="inpPrice" placeholder="price">
+        <button type="module">ADD</button>
+    </form>
+</dialog>
+<dialog class="editDialog">
+    <form action="" class="editForm">
+        <input type="text" name="inpImg" placeholder="img">
+        <select name="inpTitle" id="">
+            <option value="Butter">Butter</option>
+            <option value="Milk">Milk</option>
+            <option value="Pancakes">Pancakes</option>
+        </select>
+        <input type="text" name="inpDesc" placeholder="description">
+        <input type="text" name="inpPrice" placeholder="price">
+        <button type="module">EDIT</button>
+    </form>
+</dialog>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
 </body>
 </html>

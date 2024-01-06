@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body style="background: #343D4B;">
+    
+    <div class="all" style="">
+    <div class="infoAll" style="width: 80%;margin: 50px auto;display: flex;justify-content: space-between;">
+<div class="" style="display: flex;flex-direction: column;justify-content: flex-end;padding-left: 40px;padding-bottom: 40px;">
+   <img src="" width="50px" class="iconPogoda" alt="" srcset="">
+<p class="temperature"></p>
+<!-- 29 ° -->
+<p class="weatherLike"></p>
+<!-- Sunny -->
+</div>
+
+
+
+
+
+
+       <div class="info1" style="display: flex;flex-direction: column;justify-content: space-between;" >
+            <p class="cityCountry"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 15C10.875 11.065 14.065 7.875 18 7.875C21.935 7.875 25.125 11.065 25.125 15C25.125 18.935 21.935 22.125 18 22.125C14.065 22.125 10.875 18.935 10.875 15ZM18 10.125C15.3076 10.125 13.125 12.3076 13.125 15C13.125 17.6924 15.3076 19.875 18 19.875C20.6924 19.875 22.875 17.6924 22.875 15C22.875 12.3076 20.6924 10.125 18 10.125Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.28655 13.2853C5.81804 6.83736 11.2063 1.875 17.6761 1.875H18.324C24.7937 1.875 30.182 6.83736 30.7135 13.2853C30.999 16.749 29.9291 20.1883 27.7291 22.8789L20.5395 31.6715C19.227 33.2767 16.773 33.2767 15.4605 31.6715L8.27095 22.8789C6.07097 20.1883 5.00104 16.749 5.28655 13.2853ZM17.6761 4.125C12.3772 4.125 7.96424 8.18922 7.52895 13.4701C7.29133 16.3529 8.18179 19.2154 10.0128 21.4546L17.2024 30.2473C17.6146 30.7514 18.3854 30.7514 18.7976 30.2473L25.9872 21.4546C27.8182 19.2153 28.7087 16.3529 28.4711 13.4701C28.0358 8.18922 23.6228 4.125 18.324 4.125H17.6761Z" fill="white"/>
+</svg>
+<span class="cityCountry cityOrigin"></span>
+<!-- Dushanbe, TJ -->
+</p>
+<div class="" style="display: flex;flex-direction: column;">
+    <p class="dayOfWeek">Saturday</p>
+    <!--  -->
+<p class="timeOfDay">30 Dec 2023</p>
+<!--  -->
+</div>
+
+       </div>
+
+
+
+
+
+
+    </div>
+<div class="" style="display: flex;
+width: 450px;
+padding: 8px 8px 8px 40px;
+align-items: center;
+gap: 10px;border-radius: 100px;
+margin: 0 auto;
+background: #FFF;justify-content: space-between;">
+    <input type="search" placeholder="City" class="search">
+    <button class="buttonSearch"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <path d="M21.0067 19.0067H19.9533L19.58 18.6467C20.8867 17.1267 21.6733 15.1533 21.6733 13.0067C21.6733 8.22 17.7933 4.34 13.0067 4.34C8.22 4.34 4.34 8.22 4.34 13.0067C4.34 17.7933 8.22 21.6733 13.0067 21.6733C15.1533 21.6733 17.1267 20.8867 18.6467 19.58L19.0067 19.9533V21.0067L25.6733 27.66L27.66 25.6733L21.0067 19.0067ZM13.0067 19.0067C9.68666 19.0067 7.00666 16.3267 7.00666 13.0067C7.00666 9.68666 9.68666 7.00666 13.0067 7.00666C16.3267 7.00666 19.0067 9.68666 19.0067 13.0067C19.0067 16.3267 16.3267 19.0067 13.0067 19.0067Z" fill="white"/>
+</svg></button>
+     
+</div>
+
+<div class="" style="display: flex;
+width: 1140px;
+padding: 24px 50px;
+align-items: flex-start;
+gap: 12px;border-radius: 30px;
+background: #222831;width: 75%;margin: 50px auto;">
+    <div class="" style="display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex: 1 0 0;">
+        <p class="percenOfCity percenOb"></p>
+        <!-- 0% -->
+        <p class="PRECIPITATION allInnfo">PRECIPITATION</p>
+    </div>
+    <div class=""  style="display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex: 1 0 0;">
+        <p class="percenOfCity1 percenOb"></p>
+        <!-- 42% -->
+        <p class="HUMIDITY allInnfo">HUMIDITY</p>
+    </div>
+    <div class=""  style="display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex: 1 0 0;">
+        <p class="speed percenOb"></p>
+        <!-- 3 km/h -->
+        <p class="WIND allInnfo">WIND</p>
+
+    </div>
+</div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js" type="Module"></script>
+</body>
+</html>

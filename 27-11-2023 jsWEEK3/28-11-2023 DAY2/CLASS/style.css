@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+th{
+    padding-left: 40px;
+}
+tr:nth-child(1){
+    background-color: gray;
+  
+}

@@ -1,81 +1,144 @@
-// array mehod
+let box = document.querySelector('.box')
+let editForm = document.querySelector('.editForm')
+let editModal = document.querySelector('.dialogEdit');
+let formAdd = document.querySelector('.addForm')
+let api = 'http://localhost:3000/posts'
+let info = document.querySelector('.info');
+let infoImg = document.querySelector('.infoImg');
+let infoP = document.querySelector('.infoP');
+async function get() {
+    try {
+        const { data } = await axios.get(api)
+        getData(data)
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-//    1)   push()
-// let arr = [1, 2, 3, 4];
-// let res = arr.push(6, 'hi')
-// console.log(res); //показывает длину массива
-// console.log(arr);  //изменнённый массив то есть добавленный с конца
+async function editData(id, read) {
+    try {
+        const { data } = await axios.put(`${api}/${id}`, read)
+        get()
+    } catch (error) {
+        console.error(error);
+    }
+}
 
-
-
-//    2)    pop()
-// let arr = [1, 2, 3, 4];
-// let res = arr.pop()
-// console.log(res); // //показывает показывает удалённый элемент параметр не берёт
-// console.log(arr); // //изменнённый массив то есть удалённый с конца
-
-
-//    3)    shift()
-// let arr = [1, 2, 3, 4];
-// let res = arr.shift()
-// console.log(res); //показывает показывает удалённый элемент параметр не берёт
-// console.log(arr);  //изменнённый массив то есть удалённый с начала
-
-
-
-//    4)   unshift()
-// let arr = [1, 2, 3, 4];
-// let res = arr.unshift(6, 'hi')
-// console.log(res); //показывает длину массива
-// console.log(arr);  //изменнённый массив то есть добавленный с начала
-
-
-
-//    5)   concat()
-// let arr = [1, 2, 3, 4];
-// let res = arr.concat(6, 'hi')
-// console.log(res); //показывает изменный массив
-// console.log(arr);  //просто начальный массив самый начальный
+async function postUser(newUser) {
+    try {
+        const { data } = await axios.post(api, newUser)
+        get()
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 
+async function delet(id) {
+    try {
+        const { data } = await axios.delete(`${api}/${id}`)
+        get()
 
-//    6)   slice()
-// let arr = [1, 2, 3, 4];
-// let res = arr.slice(0, 3);
-// let res2 = arr.slice(0, 3)
-// console.log(res); //показывает
-// console.log(res2); //показывает
-// console.log(arr);  //просто начальный массив самый начальный
+    } catch (error) {
+        console.log(error);
+    }
+}
+let reader = new FileReader()
+formAdd['img'].onchange = (event) => {
 
+    let file = event.target.files[0]
 
-
-//    7)   splice() получает три параметра 1 начатьо с какого 2 сколко уд 3 чида алиш кардан добав
-// let arr = [1, 2, 3, 4];
-// let res = arr.slice(0, 3);
-// console.log(res); //показывает
-// console.log(arr);  //просто начальный массив самый начальный
-
-
-
-
-// let arr2 = []
-// let arr = ['hi', 'ho']
-// let d = arr.at(0)
-// let d2 = arr.at(1)
-// let g = d[0].toUpperCase()
-// let g2 = d2[1].toUpperCase()
-// let g1 = g.concat(d[1])
-// let g22 = g.concat(d2[1])
-// arr2.unshift(g22)
-// arr2.unshift(g1)
-// console.log(arr2);
+    reader.readAsDataURL(file)
+}
+formAdd.onsubmit = (event) => {
+    event.preventDefault()
+    let obj = {
+        title: formAdd['title'].value,
+        img: reader.result,
+        completed: false
+    }
+    postUser(obj)
+    formAdd.reset()
 
 
+}
+
+get()
+let idx = null
+function getData(data) {
+    box.innerHTML = ""
+    data.forEach((elem) => {
+        let div = document.createElement("div")
+        let h1 = document.createElement("h1")
+        h1.innerHTML = elem.title
+
+        let img = document.createElement("img")
+        img.src = elem.img
+        img.style.width = "100px"
+
+        let btnEdit = document.createElement("button")
+        btnEdit.innerHTML = "Edit"
+        
+        let btnCompl = document.createElement("span")
+        btnCompl.innerHTML = elem.completed
+        let comp = document.createElement("input")
+        comp.type = 'checkbox' 
+        comp.checked = elem.completed
+
+        comp.onclick = () => {
+            elem.completed = !elem.completed
+            editData(elem.id,elem)
+        }
 
 
+        let btnInfo = document.createElement("button")
+        btnInfo.innerHTML = "Info"
+        btnInfo.onclick = () => {
+            infoP.innerHTML = elem.title
+            infoImg.src = elem.img
+    info.showModal()
+}
+        let btnDel = document.createElement("button")
+        btnDel.innerHTML = "delete"
+        btnDel.onclick = () => {
+            delet(elem.id)
+        }
+        btnEdit.onclick = () => {
+            idx = elem.id
+            edit(elem.id)
+        }
+
+        function edit(idx) {
+
+            editModal.showModal();
+            editForm["title"].value = elem.title;
+            editForm['imgEdit'].src = elem.img;
+           
+            let iif = null
+            editForm["imgEdit"].file = elem.img;
+            editForm["imgEdit"].onchange = (event) => {
+                let editFile = event.target.files[0];
+                const reader2 = new FileReader();
+                reader2.readAsDataURL(editFile);
+                iif = reader2.result
+                editForm.onsubmit = (event) => {
+                    event.preventDefault();
+                    let user = {
+                        img: reader2.result ,
+                        title: editForm["title"].value,
+                        completed:false
+                    }
+                    editData(idx, user);
+                }
+            }
+
+        }
 
 
+            div.append(img, h1,btnEdit,btnDel,btnInfo,btnCompl,comp)
+            box.append(div)
+        
+        })
 
-
-
-
+}

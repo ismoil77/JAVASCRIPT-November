@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.all{
+    display: flex;
+    width: 85%;
+    margin: 70px auto;
+    
+    gap: 40px;
+}
+.decoration{
+    text-decoration: none;
+}
+.perehod{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 5px;
+    
+}
+.perehodText1{
+    border-right:2px solid rgb(13, 106, 255);
+    background: rgba(33, 150, 243, 0.08);
+    color: var(--primary-main, #2196F3);
+height: 42px;
+/* components/button-medium */
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
+letter-spacing: 0.4px;
+text-transform: uppercase;
+padding-top: 10px;
+
+}
+.perehodText{
+height: 42px;
+padding-top: 10px;
+    color: var(--primary-main, rgba(0, 0, 0, 0.60));
+
+/* components/button-medium */
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
+letter-spacing: 0.4px;
+text-transform: uppercase;
+}
+.late{
+    color: var(--text-primary, rgba(0, 0, 0, 0.87));
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Roboto;
+font-size: 34px;
+font-style: normal;
+font-weight: 700;
+line-height: 123.5%; /* 41.99px */
+letter-spacing: 0.25px;
+}
+.gradient-button {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+.gradient-button:hover {
+  background-position: right center;
+}
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+.pp{
+    width: 200px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #2196F3;
+    color:green ;
+    font-weight: 600;
+    font-size: 30px;
+}
